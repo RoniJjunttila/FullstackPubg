@@ -1,0 +1,163 @@
+.bluezone-header {
+    border: 1px solid black;
+    border-radius: 2px;
+    text-align: center;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.bluezone-damage-text {
+    font-family: sans-serif;
+    margin-top: 5px;
+}
+
+.bluezone-label {
+    font-size: 0.85rem;
+}
+
+.bluezone-value {
+    font-size: 0.85rem;
+}
+
+.fall-header {
+    border: 1px solid black;
+    border-radius: 2px;
+    text-align: center;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.fall-damage-text {
+    font-family: sans-serif;
+    margin-top: 5px;
+}
+
+.damage-label {
+    font-size: 0.85rem;
+}
+
+.damage-values {
+    font-size: 0.85rem;
+}
+
+.attack-details-box {
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attack-header,
+.kill-header {
+    border: 1px solid black;
+    border-radius: 2px;
+    text-align: center;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.attack-header {
+    border: 1px solid black;
+    border-radius: 2px;
+    text-align: center;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.attack-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapon-details {
+    font-family: sans-serif;
+    text-align: left;
+    margin-top: 5px;
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.damage-line {
+    font-size: 0.85rem;
+}
+
+.attachments-line {
+    font-size: 0.75rem;
+    margin-left: 10px;
+}
+
+.distance-line {
+    font-size: 0.85rem;
+}
+
+.armor-label {
+    font-size: 0.85rem;
+}
+
+.armor-item {
+    font-size: 0.75rem;
+    margin-left: 10px;
+}
+
+.match-details-container {
+    width: auto;
+    min-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-text {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.header-image {
+    width: 60%;
+    height: auto;
+    top: 5px;
+    z-index: 1;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+.image-padding {
+    padding-top: 1rem;
+}
+
+.ghibli-button {
+    margin-top: 0.8rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+    border: 1px solid black;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
