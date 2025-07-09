@@ -1,0 +1,102 @@
+[
+  {
+    "id": "f9040c82-6d34-44ad-b028-12e9461f23ad",
+    "squad": [
+      {
+        "DBNOs": 0,
+        "assists": 0,
+        "boosts": 8,
+        "damageDealt": 130.4132,
+        "deathType": "byplayer",
+        "killPlace": 59,
+        "name": "keken_viikset",
+        "playerId": "account.52ebcd27956d462ab2de50914834b467",
+        "rideDistance": 5694.2998046875,
+        "winPlace": 2
+      },
+      {
+        "DBNOs": 0,
+        "assists": 0,
+        "boosts": 6,
+        "damageDealt": 112.77205,
+        "deathType": "byplayer",
+        "killPlace": 60,
+        "name": "bold_moves_bob",
+        "playerId": "account.ac0f752d945b412caa5982ff80c4fc71",
+        "rideDistance": 4188.9794921875,
+        "winPlace": 2
+      },
+      {
+        "DBNOs": 3,
+        "assists": 0,
+        "boosts": 10,
+        "damageDealt": 218.56,
+        "deathType": "byplayer",
+        "killPlace": 8,
+        "name": "E1_Duderino",
+        "playerId": "account.c91c5752623e4eb7aacdc074d06abdf5",
+        "rideDistance": 3242.450927734375,
+        "winPlace": 2
+      }
+    ],
+    "date": "2025-04-25T15:45:49Z",
+    "game_mode": "squad-fpp",
+    "map_name": "Taego"
+  },
+  {
+    "id": "94b961cd-f937-4628-ab02-81351791adf1",
+    "date": "2025-05-04T17:38:29Z",
+    "map_name": "Erangel",
+    "squad": [
+      {
+        "DBNOs": 1,
+        "assists": 0,
+        "boosts": 10,
+        "damageDealt": 211.91415,
+        "deathType": "byplayer",
+        "killPlace": 26,
+        "name": "E1_Duderino",
+        "playerId": "account.c91c5752623e4eb7aacdc074d06abdf5",
+        "rideDistance": 0.0,
+        "winPlace": 2
+      },
+      {
+        "DBNOs": 2,
+        "assists": 1,
+        "boosts": 12,
+        "damageDealt": 297.82523,
+        "deathType": "byplayer",
+        "killPlace": 25,
+        "name": "keken_viikset",
+        "playerId": "account.52ebcd27956d462ab2de50914834b467",
+        "rideDistance": 0.0,
+        "winPlace": 2
+      },
+      {
+        "DBNOs": 0,
+        "assists": 1,
+        "boosts": 10,
+        "damageDealt": 134.4907,
+        "deathType": "byplayer",
+        "killPlace": 53,
+        "name": "bold_moves_bob",
+        "playerId": "account.ac0f752d945b412caa5982ff80c4fc71",
+        "rideDistance": 0.0,
+        "winPlace": 2
+      },
+      {
+        "DBNOs": 0,
+        "assists": 0,
+        "boosts": 8,
+        "damageDealt": 166.0,
+        "deathType": "byplayer",
+        "killPlace": 24,
+        "name": "HlGHLANDER",
+        "playerId": "account.622f062274e0486cae1f618b9a3415a7",
+        "rideDistance": 0.0,
+        "winPlace": 2
+      }
+    ],
+    "game_mode": "squad-fpp"
+  }
+]

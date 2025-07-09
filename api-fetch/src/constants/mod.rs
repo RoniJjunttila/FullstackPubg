@@ -1,0 +1,9 @@
+pub mod player_names;
+pub mod map_names;
+pub mod weapons;
+pub mod attachments;
+pub mod damage_types;
+pub mod hit_locations;
+pub mod armors;
+pub mod weapon_type;
+pub mod default_bullet_speed;
