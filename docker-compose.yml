@@ -1,0 +1,47 @@
+services:
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  api-fetch:
+    build:
+      context: .
+      dockerfile: Dockerfile.rust
+    command: ./api-fetch
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis:6379
+    env_file:
+      - .env
+
+  redis-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.rust
+    command: ./redis
+    depends_on:
+      - redis
+    ports:
+      - "3030:3030"
+    environment:
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - ./data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: build
+    image: frontend-build
+
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    depends_on:
+      - frontend
+    ports:
+      - "80:80"
