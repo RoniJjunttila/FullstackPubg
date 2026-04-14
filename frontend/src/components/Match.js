@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/Match.css";
 import { useParams } from "react-router-dom";
 
-function Match({ selectedMatch }) {
+function Match({ selectedMatch, urlLocation }) {
   const [matchData, setMatchData] = useState([]);
   const [currentMatch, setCurrentMatch] = useState();
   const [bShowBluezoneDamage, setBshowBluezoneDamage] = useState(false);
@@ -12,29 +12,22 @@ function Match({ selectedMatch }) {
   const [currentMapImage, setCurrentMapImage] = useState("");
 
   useEffect(() => {
-    let matchId;
+    let matchId = typeof urlLocation === undefined ? id : urlLocation;
 
-    if (selectedMatch === undefined) {
-      if (id === "") return;
-      matchId = id;
-      fetch("/api/matches")
-        .then((response) => response.json())
-        .then((json) => {
-          const data = json.find((match) => match.id === id);
-          setCurrentMatch({
-            date: data.date,
-            map_name: data.map_name,
-            game_mode: data.game_mode,
-          });
-          console.log("Fetched data from /api/matches:", json);
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
+    fetch("/api/matches")
+      .then((response) => response.json())
+      .then((json) => {
+        const data = json.find((match) => match.id === matchId);
+        setCurrentMatch({
+          date: data.date,
+          map_name: data.map_name,
+          game_mode: data.game_mode,
         });
-    } else {
-      matchId = selectedMatch.id;
-      setCurrentMatch(selectedMatch);
-    }
+        console.log("Fetched data from /api/matches:", json);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
 
     fetch("/api/match/" + matchId)
       .then((response) => response.json())
@@ -52,19 +45,19 @@ function Match({ selectedMatch }) {
 
     switch (currentMatch.map_name) {
       case "Erangel":
-        setCurrentMapImage("https://i.imgur.com/7Z8dQJD.png");
+        setCurrentMapImage("https://d3uv2i441dqwy0.cloudfront.net/erangel.jpg");
         break;
       case "Deston":
-        setCurrentMapImage("https://i.imgur.com/9Z27WqD.png");
+        setCurrentMapImage("https://d3uv2i441dqwy0.cloudfront.net/deston.jpg");
         break;
       case "Miramar":
-        setCurrentMapImage("https://i.imgur.com/g8kQVgY.png");
+        setCurrentMapImage("https://d3uv2i441dqwy0.cloudfront.net/miramar.jpg");
         break;
       case "Taego":
-        setCurrentMapImage("https://i.imgur.com/kEZSF3W.png");
+        setCurrentMapImage("https://d3uv2i441dqwy0.cloudfront.net/taego.jpg");
         break;
       default:
-        setCurrentMapImage("https://i.imgur.com/7Z8dQJD.png");
+        setCurrentMapImage("https://d3uv2i441dqwy0.cloudfront.net/erangel.jpg");
     }
   }, [currentMatch]);
 
@@ -146,7 +139,7 @@ function Match({ selectedMatch }) {
               attack.finishDamageInfo.damageTypeCategory !==
                 "Bleed Out Damage" &&
               attack.distance?.toFixed(2) !== -1.0 &&
-              ` — distance: ${attack.distance?.toFixed(2)} meters`}
+              ` — distance: ${attack.distance ? attack.distance?.toFixed(2) : "N/A"} meters`}
           </p>
         </div>
       </div>
